@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
 
 .App-header {
   background-color: #282c34;
@@ -20,3 +17,24 @@
 .App-link {
   color: #09d3ac;
 }
+
+ul{
+  list-style-type: none;
+  
+}
+
+.todoListMain{
+  border: 2px solid red;
+  border-radius: 5px;
+  width:60%;
+  margin:0 auto;
+  padding-top:15px;
+
+}
+
+.lists{
+display: flex;
+}
+
+
+

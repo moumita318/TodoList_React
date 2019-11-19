@@ -26,18 +26,17 @@ class TodoLists extends Component {
 
 	}
 
-    deletecontact(key){
+      deletecontact(val){
 
-   let newArray=this.state.list.filter((m)=>m.key !== key);
+   let newArray=this.state.list.filter((e)=> e != val );
 
     	this.setState({
            list:newArray,
            userInput:''
 
     	})
-    }
-
-
+    
+}
 	render() {
 		return (
 			<div className="todoListMain">
@@ -46,8 +45,8 @@ class TodoLists extends Component {
 			value={this.state.userInput} type="text"/>
 			<button onClick={ ()=>this.addToList(this.state.userInput)}>submit</button>
 			<ul>
-			{this.state.list.map((val,index)=><div key={index}><li>{val}</li>
-		     <button onClick={(key)=>this.deletecontact(key)}>delete</button></div>)
+			{this.state.list.map((val,index)=><div><li key={index}>{val}</li>
+		     <button onClick={ ()=>this.deletecontact(val)}>delete</button></div>)
 		 } 
 			</ul>
 			</div>
